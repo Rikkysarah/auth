@@ -8,7 +8,7 @@ const User = require('../models/user');
       ****************************************************/
     router.post('/user/person', (req, res)=>{
         let {email:email} = req.body;
-        User.findOne({email}, (err, doc)=>{
+        User.findOne({ email }, "-password", (err, doc)=>{
             if(err){
                 console.log(err)
                            
@@ -21,7 +21,7 @@ const User = require('../models/user');
 
 
 /*****************************************************
-*         To view all register users by admin         *
+*         To view all registered users by admin         *
 ******************************************************/
 
     router.get('/allUsers', (req, res)=>{

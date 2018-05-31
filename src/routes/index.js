@@ -10,6 +10,6 @@ router.get('/', (req, res) => {
 });
 
 //All routes to be used
-router.use('/sarah', user);
+router.use('/farm', user);
 
 module.exports = router;

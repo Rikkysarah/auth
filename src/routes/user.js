@@ -50,14 +50,15 @@ module.exports.register = (req, res) => {
                 var mailOptions = {
                   from: 'churchsapps@gmail.com',
                     to: user.email,
-                    subject: 'Hi Geek',
+                    subject: 'Welcome to X-farms',
                     text: `Hello ${firstName} ${lastName},
                     
-                    Welcome, keep exploring,
+                    Welcome to X-farms, enjoy all our products and services.
 
                     ${req.headers.host}
             
                     Thanks for choosing us!
+                    X-farms.
                     `
                 };
     
@@ -171,7 +172,7 @@ module.exports.login = (req, res) => {
             If you did not request this, please ignore this email and your password will remain unchanged.
             
             Thanks!
-            
+            X-farms.
             `
         };
 
@@ -216,6 +217,7 @@ module.exports.reset_pword = (req, res, next)=> {
                     You've successfully changed your password.
                      
                     Thanks !
+                    X-farms.
                     `
                   };
                   smtpTransport.sendMail(mailOptions, (err) => {

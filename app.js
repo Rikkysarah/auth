@@ -91,7 +91,7 @@ process.on('SIGINT', () => {
 /**********
  * Routes *
  *********/
-    app.use('/', require('./app/routes/index'));
+    app.use('/', require('./src/routes/index'));
 
 /**************
  * Export app *
